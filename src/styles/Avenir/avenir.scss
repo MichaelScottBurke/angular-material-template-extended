@@ -1,0 +1,108 @@
+//$font-url: "./styles/fonts/";
+/************** avenir css default font-weight chart *************
+  200    Light or Thin
+  400    Roman, Normal or Regular
+  500    Medium
+  700    Bold Heavy
+  900    Extra Black, Fat, Poster or Ultra Black
+*************/
+
+// LIGHT
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-Light.woff2') format('woff2'),
+      url('Avenir-Light.woff') format('woff'),
+      url('Avenir-Light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+//LIGHT ITALIC
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-LightOblique.woff2') format('woff2'),
+      url('Avenir-LightOblique.woff') format('woff'),
+      url('Avenir-LightOblique.ttf') format('ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+//ROMAN (NORMAL)
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-Roman.woff2') format('woff2'),
+      url('Avenir-Roman.woff') format('woff'),
+      url('Avenir-Roman.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//ROMAN ITALIC
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-Oblique.woff2') format('woff2'),
+      url('Avenir-Oblique.woff') format('woff'),
+      url('Avenir-Oblique.ttf') format('ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+//MEDIUM
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-Medium.woff2') format('woff2'),
+      url('Avenir-Medium.woff') format('woff'),
+      url('Avenir-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+//MEDIUM ITALIC
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-MediumOblique.woff2') format('woff2'),
+      url('Avenir-MediumOblique.woff') format('woff'),
+      rl('Avenir-MediumOblique.ttf') format('ttf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+//HEAVY
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-Heavy.woff2') format('woff2'),
+      url('Avenir-Heavy.woff') format('woff'),
+      url('Avenir-Heavy.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+//HEAVY ITALIC
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-HeavyOblique.woff2') format('woff2'),
+      url('Avenir-HeavyOblique.woff') format('woff')
+      url('Avenir-HeavyOblique.ttf') format('ttf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+//BLACK
+@font-face {
+  font-family: 'Avenir2';
+  src: url('Avenir-Black.woff2') format('woff2'),
+      url('Avenir-Black.woff') format('woff'),
+      url('Avenir-Black.ttf') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+//BLACK ITALIC
+@font-face {
+  font-family: 'Avenir Black Oblique';
+  src: url('Avenir-BlackOblique.woff2') format('woff2'),
+      url('Avenir-BlackOblique.woff') format('woff'),
+      url('Avenir-BlackOblique.woff') format('ttf');
+  font-weight: 900;
+  font-style: italic;
+}
