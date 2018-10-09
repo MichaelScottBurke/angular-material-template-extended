@@ -1,0 +1,489 @@
+//css classes for theme colors
+//variables on light background
+$high-emphasis: .87;
+$med-emphasis: .60;
+$disabled: .38;
+$active: .87;
+$inactive: .54;
+$divider: .12;
+
+//black text & icon color
+.high-emphasis-text {
+  color: rgba($black, $high-emphasis);
+}
+.medium-emphasis-text {
+  color: rgba($black, $med-emphasis);
+}
+.disabled-text {
+  color: rgba($black, $disabled);
+}
+.active-icon, [active-icon] {
+  color: rgba($black, $active);
+}
+.inactive-icon, [inactive-icon] {
+  color: rgba($black, $inactive);
+}
+.disabled-icon, [disabled-icon] {
+  color: rgba($black, $disabled);
+}
+
+//text & icons on primary
+[color='primary'], .primary, .mat-primary {
+  $high-emphasis: 1.0;
+
+  .high-emphasis-text {
+  color: rgba(mat-color($primary, default-contrast), $high-emphasis);
+  }
+  .medium-emphasis-text {
+    color: rgba(mat-color($primary, default-contrast), $med-emphasis);
+  }
+  .disabled-text {
+  color: rgba(mat-color($primary, default-contrast), $disabled);
+  }
+  .active-icon, [active-icon] {
+    color: rgba(mat-color($primary, default-contrast), $active);
+  }
+  .inactive-icon, [inactive-icon] {
+    color: rgba(mat-color($primary, default-contrast), $inactive);
+  }
+  .disabled-icon, [disabled-icon] {
+    color: rgba(mat-color($primary, default-contrast), $disabled);
+  }
+}
+
+
+//text & icons on secondary
+[color='secondary'], .secondary, .mat-secondary {
+  $high-emphasis: 1;
+  $med-emphasis: .60;
+  $disabled: .38;
+  $active: .87;
+  $inactive: .54;
+  .high-emphasis-text {
+  color: rgba(mat-color($secondary, default-contrast), $high-emphasis);
+  }
+  .medium-emphasis-text {
+      color: rgba(mat-color($secondary, default-contrast), $med-emphasis);
+  }
+  .disabled-text {
+  color: rgba(mat-color($secondary, default-contrast), $disabled);
+  }
+  .active-icon, [active-icon] {
+    color: rgba(mat-color($secondary, default-contrast), $active);
+  }
+  .inactive-icon, [inactive-icon] {
+    color: rgba(mat-color($secondary, default-contrast), $inactive);
+  }
+  .disabled-icon, [disabled-icon] {
+    color: rgba(mat-color($secondary, default-contrast), $disabled);
+  }
+}
+
+//text & icons on error
+[color='error'], .error, .mat-error {
+  $high-emphasis: 1;
+  $med-emphasis: .60;
+  $disabled: .38;
+  $active: .87;
+  $inactive: .54;
+
+  .high-emphasis-text {
+  color: rgba(mat-color($error, default-contrast), $high-emphasis);
+  }
+  .medium-emphasis-text {
+      color: rgba(mat-color($error, default-contrast), $med-emphasis);
+  }
+  .disabled-text {
+  color: rgba(mat-color($error, default-contrast), $disabled);
+  }
+  .active-icon, [active-icon] {
+    color: rgba(mat-color($error, default-contrast), $active);
+  }
+  .inactive-icon, [inactive-icon] {
+    color: rgba(mat-color($error, default-contrast), $inactive);
+  }
+  .disabled-icon, [disabled-icon] {
+    color: rgba(mat-color($error, default-contrast), $disabled);
+  }
+}
+
+//text & icons on surface
+[color='surface'], .surface, .mat-surface {
+  $high-emphasis: 1;
+  $med-emphasis: .60;
+  $disabled: .38;
+  $active: .87;
+  $inactive: .54;
+
+  .high-emphasis-text {
+  color: rgba(mat-color($surface, default-contrast), $high-emphasis);
+  }
+  .medium-emphasis-text {
+      color: rgba(mat-color($surface, default-contrast), $med-emphasis);
+  }
+  .disabled-text {
+  color: rgba(mat-color($surface, default-contrast), $disabled);
+  }
+  .active-icon, [active-icon] {
+    color: rgba(mat-color($surface, default-contrast), $active);
+  }
+  .inactive-icon, [inactive-icon] {
+    color: rgba(mat-color($surface, default-contrast), $inactive);
+  }
+  .disabled-icon, [disabled-icon] {
+    color: rgba(mat-color($surface, default-contrast), $disabled);
+  }
+}
+
+//full color palettes text & background colors
+.primary {
+  background-color: mat-color($primary);
+  color: mat-color($primary, default-contrast);
+}
+
+.primary-text {
+  color: mat-color($primary);
+}
+
+//to do: investigate why?
+.mat-primary[active-icon] {
+    color: mat-color($primary);
+}
+
+.primary-darker {
+  background-color: mat-color($primary, darker);
+  color: mat-color($primary, "darker-contrast");
+}
+
+.primary-lighter {
+  background-color: mat-color($primary, lighter);
+  color: mat-color($primary, "lighter-contrast");
+}
+
+.primary-50 {
+  background-color: mat-color($primary, 50);
+  color: mat-color($primary, "50-contrast");
+}
+
+.primary-100 {
+  background-color: mat-color($primary, 100);
+  color: mat-color($primary, "100-contrast");
+}
+
+.primary-200 {
+  background-color: mat-color($primary, 200);
+  color: mat-color($primary, "200-contrast");
+}
+
+.primary-300 {
+  background-color: mat-color($primary, 300);
+  color: mat-color($primary, "300-contrast");
+}
+
+.primary-400 {
+  background-color: mat-color($primary, 400);
+  color: mat-color($primary, "400-contrast");
+}
+
+.primary-500 {
+  background-color: mat-color($primary, 500);
+  color: mat-color($primary, "500-contrast");
+}
+
+.primary-600 {
+  background-color: mat-color($primary, 600);
+  color: mat-color($primary, "600-contrast");
+}
+
+.primary-700 {
+  background-color: mat-color($primary, 700);
+  color: mat-color($primary, "700-contrast");
+}
+
+.primary-800 {
+  background-color: mat-color($primary, 800);
+  color: mat-color($primary, "800-contrast");
+}
+
+.primary-900 {
+  background-color: mat-color($primary, 900);
+  color: mat-color($primary, "900-contrast");
+}
+
+.secondary {
+  background-color: mat-color($secondary);
+  color: mat-color($secondary, default-contrast);
+}
+
+.secondary-text {
+  color: mat-color($secondary);
+}
+
+.secondary-darker {
+  background-color: mat-color($secondary, darker);
+  color: mat-color($secondary, "darker-contrast");
+}
+
+.secondary-lighter {
+  background-color: mat-color($secondary, lighter);
+  color: mat-color($secondary, "lighter-contrast");
+}
+
+.secondary-50 {
+  background-color: mat-color($secondary, 50);
+  color: mat-color($secondary, "50-contrast");
+}
+
+.secondary-100 {
+  background-color: mat-color($secondary, 100);
+  color: mat-color($secondary, "100-contrast");
+}
+
+.secondary-200 {
+  background-color: mat-color($secondary, 200);
+  color: mat-color($secondary, "200-contrast");
+}
+
+.secondary-300 {
+  background-color: mat-color($secondary, 300);
+  color: mat-color($secondary, "300-contrast");
+}
+
+.secondary-400 {
+  background-color: mat-color($secondary, 400);
+  color: mat-color($secondary, "400-contrast");
+}
+
+.secondary-500 {
+  background-color: mat-color($secondary, 500);
+  color: mat-color($secondary, "500-contrast");
+}
+
+.secondary-600 {
+  background-color: mat-color($secondary, 600);
+  color: mat-color($secondary, "600-contrast");
+}
+
+.secondary-700 {
+  background-color: mat-color($secondary, 700);
+  color: mat-color($secondary, "700-contrast");
+}
+
+.secondary-800 {
+  background-color: mat-color($secondary, 800);
+  color: mat-color($secondary, "800-contrast");
+}
+
+.secondary-900 {
+  background-color: mat-color($secondary, 900);
+  color: mat-color($secondary, "900-contrast");
+}
+
+.error {
+  background-color: mat-color($error);
+  color: mat-color($error, default-contrast);
+}
+
+.error-text {
+  color: mat-color($error);
+}
+
+.error-darker {
+  background-color: mat-color($error, darker);
+  color: mat-color($error, "darker-contrast");
+}
+
+.error-lighter {
+  background-color: mat-color($error, lighter);
+  color: mat-color($error, "lighter-contrast");
+}
+
+.error-50 {
+  background-color: mat-color($error, 50);
+  color: mat-color($error, "50-contrast");
+}
+
+.error-100 {
+  background-color: mat-color($error, 100);
+  color: mat-color($error, "100-contrast");
+}
+
+.error-200 {
+  background-color: mat-color($error, 200);
+  color: mat-color($error, "200-contrast");
+}
+
+.error-300 {
+  background-color: mat-color($error, 300);
+  color: mat-color($error, "300-contrast");
+}
+
+.error-400 {
+  background-color: mat-color($error, 400);
+  color: mat-color($error, "400-contrast");
+}
+
+.error-500 {
+  background-color: mat-color($error, 500);
+  color: mat-color($error, "500-contrast");
+}
+
+.error-600 {
+  background-color: mat-color($error, 600);
+  color: mat-color($error, "600-contrast");
+}
+
+.error-700 {
+  background-color: mat-color($error, 700);
+  color: mat-color($error, "700-contrast");
+}
+
+.error-800 {
+  background-color: mat-color($error, 800);
+  color: mat-color($error, "800-contrast");
+}
+
+.error-900 {
+  background-color: mat-color($error, 900);
+  color: mat-color($error, "900-contrast");
+}
+
+.brand {
+  background-color: mat-color($brand);
+  color: mat-color($brand, default-contrast);
+}
+
+//must be darker to be accessible
+.brand-text {
+  color: mat-color($brand, darker);
+}
+
+.brand-darker {
+  background-color: mat-color($brand, darker);
+  color: mat-color($brand, "darker-contrast");
+}
+
+.brand-lighter {
+  background-color: mat-color($brand, lighter);
+  color: mat-color($brand, "lighter-contrast");
+}
+
+.brand-50 {
+  background-color: mat-color($brand, 50);
+  color: mat-color($brand, "50-contrast");
+}
+
+.brand-100 {
+  background-color: mat-color($brand, 100);
+  color: mat-color($brand, "100-contrast");
+}
+
+.brand-200 {
+  background-color: mat-color($brand, 200);
+  color: mat-color($brand, "200-contrast");
+}
+
+.brand-300 {
+  background-color: mat-color($brand, 300);
+  color: mat-color($brand, "300-contrast");
+}
+
+.brand-400 {
+  background-color: mat-color($brand, 400);
+  color: mat-color($brand, "400-contrast");
+}
+
+.brand-500 {
+  background-color: mat-color($brand, 500);
+  color: mat-color($brand, "500-contrast");
+}
+
+.brand-600 {
+  background-color: mat-color($brand, 600);
+  color: mat-color($brand, "600-contrast");
+}
+
+.brand-700 {
+  background-color: mat-color($brand, 700);
+  color: mat-color($brand, "700-contrast");
+}
+
+.brand-800 {
+  background-color: mat-color($brand, 800);
+  color: mat-color($brand, "800-contrast");
+}
+
+.brand-900 {
+  background-color: mat-color($brand, 900);
+  color: mat-color($brand, "900-contrast");
+}
+
+.surface {
+  background-color: mat-color($surface);
+  color: mat-color($surface, default-contrast);
+}
+
+.surface-darker {
+  background-color: mat-color($surface, darker);
+  color: mat-color($surface, "darker-contrast");
+}
+
+.surface-lighter {
+  background-color: mat-color($surface, lighter);
+  color: mat-color($surface, "lighter-contrast");
+}
+
+.surface-50 {
+  background-color: mat-color($surface, 50);
+  color: mat-color($surface, "50-contrast");
+}
+
+.surface-100 {
+  background-color: mat-color($surface, 100);
+  color: mat-color($surface, "100-contrast");
+}
+
+.surface-200 {
+  background-color: mat-color($surface, 200);
+  color: mat-color($surface, "200-contrast");
+}
+
+.surface-300 {
+  background-color: mat-color($surface, 300);
+  color: mat-color($surface, "300-contrast");
+}
+
+.surface-400 {
+  background-color: mat-color($surface, 400);
+  color: mat-color($surface, "400-contrast");
+}
+
+.surface-500 {
+  background-color: mat-color($surface, 500);
+  color: mat-color($surface, "500-contrast");
+}
+
+.surface-600 {
+  background-color: mat-color($surface, 600);
+  color: mat-color($surface, "600-contrast");
+}
+
+.surface-700 {
+  background-color: mat-color($surface, 700);
+  color: mat-color($surface, "700-contrast");
+}
+
+.surface-800 {
+  background-color: mat-color($surface, 800);
+  color: mat-color($surface, "800-contrast");
+}
+
+.surface-900 {
+  background-color: mat-color($surface, 900);
+  color: mat-color($surface, "900-contrast");
+}
+
+.background {
+  background-color: mat-color($background);
+}
+

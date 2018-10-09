@@ -1,0 +1,360 @@
+//these extensions and overrides allow using updated material spec semantic values of $secondary and $error
+
+//badges
+  .mat-badge-secondary {
+    .mat-badge-content {
+      background: mat-color($secondary);
+      color: mat-color($secondary, default-contrast);
+    }
+  }
+  .mat-badge-brand {
+    .mat-badge-content {
+      background: mat-color($brand);
+      color: mat-color($brand, default-contrast);
+    }
+  }
+    .mat-badge-error {
+    .mat-badge-content {
+      background: mat-color($error);
+      color: mat-color($error, default-contrast);
+    }
+  }
+
+//buttons
+// focus
+.mat-secondary .mat-button-focus-overlay {
+      background-color: mat-color($secondary, 0.12);
+}
+.mat-brand .mat-button-focus-overlay {
+      background-color: mat-color($brand, 0.12);
+}
+.mat-error .mat-button-focus-overlay {
+      background-color: mat-color($error, 0.12);
+}
+
+  .mat-secondary .mat-ripple-element {
+     &.mat-secondary {
+    background: mat-color($secondary);
+     }
+  }
+
+  .mat-brand .mat-ripple-element {
+     &.mat-brand {
+    background: mat-color($brand);
+     }
+  }
+
+    .mat-error .mat-ripple-element {
+     &.mat-error {
+    background: mat-color($error);
+     }
+  }
+
+  .mat-button {
+    &.mat-secondary {
+      color: mat-color($secondary);
+    }
+    &.mat-brand {
+      //must use 'darker' to achieve accessibility contrast
+      color: mat-color($brand, darker);
+    }
+    &.mat-error {
+      color: mat-color($error);
+    }
+  }
+
+//to do: fix focus overlay????
+  .mat-icon-button {
+    &.mat-secondary {
+      color: mat-color($secondary);
+    }
+    &.mat-brand {
+    color: mat-color($brand);
+    }
+    &.mat-error {
+    color: mat-color($error);
+    }
+  }
+
+  .mat-stroked-button {
+    &.mat-secondary {
+    border-color: mat-color($secondary);
+    color: mat-color($secondary);
+    }
+    &.mat-brand {
+    border-color: mat-color($brand);
+    //color: mat-color($brand, default-contrast);
+    color: mat-color($brand, darker);
+    }
+        &.mat-error {
+    border-color: mat-color($error);
+    color: mat-color($error);
+    }
+  }
+
+
+  .mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+      &.mat-secondary {
+      background: mat-color($secondary);
+      color: mat-color($secondary, default-contrast);
+     }
+     &.mat-brand {
+      background: mat-color($brand);
+      color: mat-color($brand, default-contrast);
+     }
+          &.mat-error {
+      background: mat-color($error);
+      color: mat-color($error, default-contrast);
+     }
+  }
+
+//cards 
+//to do: fix for dark surface and white icons, etc.
+
+//checkboxes
+.mat-checkbox-indeterminate, .mat-checkbox-checked {
+    &.mat-secondary .mat-checkbox-background {
+      background-color: mat-color($secondary);
+    }
+    &.mat-brand .mat-checkbox-background {
+      background-color: mat-color($brand);
+    }
+    &.mat-error .mat-checkbox-background {
+      background-color: mat-color($error);
+    }
+  }
+
+  mat-checkbox:not(.mat-checkbox-disabled) {
+    &.mat-secondary .mat-checkbox-ripple .mat-ripple-element {
+      background-color: mat-color($secondary, 0.26);
+    }
+
+    &.mat-brand .mat-checkbox-ripple .mat-ripple-element {
+      background-color: mat-color($brand, 0.26);
+    }
+
+    &.mat-error .mat-checkbox-ripple .mat-ripple-element {
+      background-color: mat-color($error, 0.26);
+    }
+  }
+
+
+//chips
+.mat-chip.mat-standard-chip.mat-chip-selected {
+    &.mat-secondary {
+      @include mat-chips-theme-color($secondary);
+    }
+    &.mat-brand {
+      @include mat-chips-theme-color($brand);
+    }
+    &.mat-error {
+      @include mat-chips-theme-color($error);
+    }
+  }
+
+  //date pickers: To do: these need more work to get the calendar focus to match extended theme: https://github.com/angular/material2/blob/master/src/lib/datepicker/_datepicker-theme.scss
+  .mat-datepicker-content {
+    &.mat-secondary {
+      @include _mat-datepicker-color($secondary);
+    }
+    &.mat-brand {
+      @include _mat-datepicker-color($brand);
+    }
+     &.mat-error {
+      @include _mat-datepicker-color($error);
+    }
+  }
+
+  .mat-datepicker-toggle-active {
+    //sets default to secondary
+    //color: mat-color($secondary);
+    //adds error theme level
+    &.mat-secondary {
+      color: mat-color($secondary);
+    }
+    &.mat-brand {
+      color: mat-color($brand);
+    }
+    &.mat-warn {
+      color: mat-color($error);
+    }
+  }
+
+//icons (non-button) also supports legacy
+.mat-icon {
+    &.mat-secondary, &.mat-accent {
+      color: mat-color($secondary);
+    }
+    &.mat-brand {
+      color: mat-color($brand);
+    }
+    &.mat-error, &.mat-warn {
+      color: mat-color($error);
+    }
+}
+//for inactive icons
+.mat-icon[inactive-icon] {
+  color: rgba($black,.60);
+  &.mat-primary {
+    color: rgba(mat-color($primary),.60);
+  }
+  &.mat-secondary, &.mat-accent {
+  color: rgba(mat-color($secondary),.60);
+  }
+  &.mat-brand {
+    color: rgba(mat-color($brand),.60);
+  }
+  &.mat-error, &.mat-warn {
+    color: rgba(mat-color($error),.60);
+  }
+}
+
+//for disabled icons
+.mat-icon[disabled] {
+  color: rgba($black,.38);
+  &.mat-primary {
+    color: rgba(mat-color($primary),.38);
+  }
+  &.mat-secondary, &.mat-accent {
+  color: rgba(mat-color($secondary),.38);
+  }
+    &.mat-brand {
+    color: rgba(mat-color($brand),.38);
+  }
+  &.mat-error, &.mat-warn {
+    color: rgba(mat-color($error),.38);
+  }
+}
+
+
+//progress bars
+.mat-progress-bar.mat-brand {
+    .mat-progress-bar-background {
+      fill: mat-color($brand, lighter);
+    }
+
+    .mat-progress-bar-buffer {
+      background-color: mat-color($brand, lighter);
+    }
+
+    .mat-progress-bar-fill::after {
+      background-color: mat-color($brand);
+    }
+  }
+  .mat-progress-bar.mat-secondary {
+    .mat-progress-bar-background {
+      fill: mat-color($secondary, lighter);
+    }
+
+    .mat-progress-bar-buffer {
+      background-color: mat-color($secondary, lighter);
+    }
+
+    .mat-progress-bar-fill::after {
+      background-color: mat-color($secondary);
+    }
+  }
+
+  .mat-progress-bar.mat-error {
+    .mat-progress-bar-background {
+      fill: mat-color($error, lighter);
+    }
+
+    .mat-progress-bar-buffer {
+      background-color: mat-color($error, lighter);
+    }
+
+    .mat-progress-bar-fill::after {
+      background-color: mat-color($error);
+    }
+  }
+
+//progress spinners
+.mat-progress-spinner, .mat-spinner {
+  &.mat-secondary circle {
+      stroke: mat-color($secondary);
+    }
+    &.mat-brand circle {
+      stroke: mat-color($brand);
+    }
+    &.mat-error circle {
+      stroke: mat-color($error);
+    }
+}
+
+//radio buttons
+  .mat-radio-button {
+    &.mat-secondary {
+      @include _mat-radio-color($secondary);
+    }
+    &.mat-brand {
+      @include _mat-radio-color($brand);
+    }
+    &.mat-error {
+      @include _mat-radio-color($error);
+    }
+  }
+
+//steppers
+//default is primary; override to secondary
+.mat-step-header {
+  .mat-step-icon {
+      background-color: mat-color($secondary);
+      color: mat-color($secondary, default-contrast);
+    }
+
+  .mat-step-icon-selected,
+  .mat-step-icon-state-done,
+  .mat-step-icon-state-edit {
+    background-color: mat-color($secondary);
+    color: mat-color($secondary, default-contrast);
+  }
+}
+
+
+//sliders
+.mat-slider {
+    &.mat-secondary {
+      @include _mat-slider-inner-content-theme($secondary);
+    }
+     &.mat-brand {
+      @include _mat-slider-inner-content-theme($brand);
+    }
+    &.mat-error {
+      @include _mat-slider-inner-content-theme($error);
+    }
+  }
+
+
+//switches (slide toggle)
+//this also fixes the bug w/ lighter toggle switch
+  .mat-slide-toggle {
+    &.mat-primary {
+      @include _mat-slide-toggle-checked($primary, 700);
+    }
+    &.mat-secondary, &.mat-accent {
+      @include _mat-slide-toggle-checked($secondary, 800);
+    }
+     &.mat-brand {
+      @include _mat-slide-toggle-checked($brand, 500);
+    }
+    &.mat-error {
+      @include _mat-slide-toggle-checked($error, 800);
+    }
+  }
+
+
+
+//toolbars
+  .mat-toolbar {
+    &.mat-secondary {
+      @include _mat-toolbar-color($secondary);
+    }
+     &.mat-brand {
+      @include _mat-toolbar-color($brand);
+    }
+         &.mat-error {
+      @include _mat-toolbar-color($error);
+    }
+
+  }

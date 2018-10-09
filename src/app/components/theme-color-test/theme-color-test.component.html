@@ -1,0 +1,44 @@
+<div class="color-palette-example grid-layout">
+  <!--mat-card>
+    
+  </mat-card-->
+  <div class="card-row">
+	<mat-card *ngFor="let t of themeLevels" [ngClass]="t.value+' card-cell'">
+		<mat-card-title-group>
+			<mat-card-title>
+				<span text-captilize>{{t.label}}</span>
+			</mat-card-title>
+			<mat-card-subtitle>
+				<div class="mat-body-1">
+					<div class="high-emphasis-text">High emphasis text</div>
+					<div class="medium-emphasis-text">Medium emphasis text</div>
+					<div class="disabled-text">Disabled text</div>
+				</div>
+				<div padding-top>
+					<mat-icon class="active-icon">favorite</mat-icon>
+					<mat-icon class="inactive-icon">favorite</mat-icon>
+					<mat-icon class="disabled-icon">favorite</mat-icon>
+				</div>
+			</mat-card-subtitle>
+			<div mat-card-lg-image [ngClass]="[t.value=='surface' ? t.value+'-900' : t.value+'-50']">
+				<div padding text-left>
+					<p [ngClass]="t.value+'-text'" high-emphasis-text text-sentence-case>{{t.value}} text example</p>
+				</div>
+				<div padding>
+					<mat-icon [color]="t.value" active-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+					<mat-icon [color]="t.value" inactive-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+					<mat-icon [color]="t.value" disabled aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+				</div>
+				<!--div class="row">
+					<div class="cell">
+						darker
+					</div>
+					<div class="cell">
+						lighter
+					</div>
+				</div-->
+				</div>
+		</mat-card-title-group>
+	</mat-card>
+  </div>
+</div>

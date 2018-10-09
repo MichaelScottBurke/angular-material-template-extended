@@ -1,0 +1,26 @@
+//color swatch
+[color-swatch] {
+  padding: 4px;
+  text-align: left;
+}
+
+.row {
+  flex-wrap: wrap;
+}
+
+mat-card.mat-card.cell {
+    padding: 8px;
+    min-width: 125px;
+    max-width: 200px;
+    border: none;
+    margin: 0 16px 0 0;
+    :last-child {
+      margin-right: 0;
+    }
+}
+mat-card.mat-card.cell:last-child {
+   margin-right: 0;
+}
+
+//border only to help display
+.surface {border: 1px solid #eee;}

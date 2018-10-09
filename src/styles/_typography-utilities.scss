@@ -1,0 +1,109 @@
+ //configure css classes to match type styles
+
+ $font-light: 200;
+ $font-normal: 400; //or 500?
+ $font-medium: 600;
+ $font-semi-bold: 800;
+ $font-bold: 900;
+
+ //font-weights: to override defaults
+[font-light], .font-light {
+  font-weight: $font-light !important;
+}
+
+[font-normal], .font-normal {
+  font-weight: $font-normal !important;
+}
+
+[font-medium], .font-medium {
+  font-weight: $font-normal !important;
+}
+
+[font-semi-bold], .font-semi-bold {
+  font-weight: $font-semi-bold !important;
+}
+
+[font-bold], .font-bold {
+  font-weight: $font-bold !important;
+}
+
+
+
+ //this adds the "overline" type category not yet supported in Angular Material
+$custom-typography-add: mat-typography-config(
+  $caption: mat-typography-level(1rem, 1.4rem, 600) //$overline
+);
+
+//map semantic levels to new material design levels and set to custom typography
+.mat-body, .mat-body p, .mat-body-2 p, .mat-typography p {
+    font-family: mat-font-family($custom-typography);
+    @include mat-typography-level-to-styles($custom-typography, body-1);
+}
+
+// example of css clases to set typestyles (preferred); includes new MD spec typography styles (not yet fully supported in AM, but achievable through this mapping)
+.mat-headline-1, .mat-display-4, .custom-headline-1, .custom-display-4 {
+    @include mat-typography-level-to-styles($custom-typography, display-4);
+    letter-spacing: -.15rem;
+  }
+
+  .mat-headline-2, .custom-headline-2, .custom-display-3, .mat-display-3 {
+    @include mat-typography-level-to-styles($custom-typography, display-3);
+    letter-spacing: -.05rem;    
+  }
+
+.mat-headline-3, .custom-headline-3, .custom-display-2, .mat-display-2  {
+    @include mat-typography-level-to-styles($custom-typography, display-2); 
+  }
+
+ .mat-headline-4, .custom-headline-4,  .custom-display-1, .mat-display-1  {
+    @include mat-typography-level-to-styles($custom-typography, display-1);
+    letter-spacing: .025rem;    
+  }
+
+  .mat-headline-5, .custom-headline-5, .custom-headline, .mat-headline  {
+    @include mat-typography-level-to-styles($custom-typography, headline);
+  }
+
+  .mat-headline-6, .custom-headline-6, .custom-title, .mat-title  {
+    @include mat-typography-level-to-styles($custom-typography, title);
+    letter-spacing: .015rem;
+  }
+
+  .mat-subtitle-1, .custom-subtitle-1, .custom-subheading-2, .mat-subheading-2 {
+    @include mat-typography-level-to-styles($custom-typography, subheading-2);
+      letter-spacing: .015rem;    
+  }
+ .mat-subtitle-2, .custom-subtitle-2,  .custom-subheading-1, .mat-subheading-1  {
+    @include mat-typography-level-to-styles($custom-typography, subheading-1);
+    letter-spacing: .01rem;    
+  }
+
+  .mat-body-1, .custom-body-1 { //breaking change  changes default size and weight
+    @include mat-typography-level-to-styles($custom-typography, body-1);
+    letter-spacing: .05rem;    
+  }
+
+   .mat-body-2, .custom-body-2 { //breaking change: changes default size
+    @include mat-typography-level-to-styles($custom-typography, body-2);
+    letter-spacing: .025rem;    
+  }
+
+  .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button,
+  .custom-button, .custom-raised-button, .custom-stroked-button, .custom-flat-button {
+    @include mat-typography-level-to-styles($custom-typography, button);
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+  }
+
+  .mat-caption, .custom-caption {
+    @include mat-typography-level-to-styles($custom-typography, caption);
+    letter-spacing: .04rem;
+  }
+
+  .mat-overline, .custom-overline {
+    @include mat-typography-level-to-styles($custom-typography-add, caption); //note: using "$custom-typography.."
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+  }
+
+@import 'typography-components-custom';

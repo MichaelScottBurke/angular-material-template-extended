@@ -1,0 +1,423 @@
+<form>
+	<table class="mat-table-example mat-elevation-z1">
+		<thead>
+			<tr>
+				<th>Component</th>
+				<th text-med-emphasis text-captilize *ngFor="let v of themeValues">
+					{{v.label}}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- badge -->
+			<tr>
+				<th>Badges: <small>on icon</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-icon-button>
+          <mat-icon matBadge="15" [matBadgeColor]="v.value">notifications</mat-icon>
+        </button>
+				</td>
+			</tr>
+			<tr>
+				<th>Badges: <small>on text</small></th>
+				<td *ngFor="let v of themeValues">
+					<p>
+						<span matBadge="4" matBadgeOverlap="false" [matBadgeColor]="v.value">Text</span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<th>Badges: <small>on button</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-raised-button matBadge="8" matBadgePosition="after" [matBadgeColor]="v.value">
+    Action
+  </button>
+				</td>
+			</tr>
+			<!-- buttons -->
+			<!-- text buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Text</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-button [color]="v.value">{{v.label}}</button>
+				</td>
+			</tr>
+			<!-- outlined/stroked buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Outlined (stroked)</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-stroked-button [color]="v.value">{{v.label}}</button>
+				</td>
+			</tr>
+      <!-- contained/raised buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Contained (raised)</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-raised-button [color]="v.value">{{v.label}}</button>
+				</td>
+			</tr>
+			<!-- flat buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Flat</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-flat-button [color]="v.value">{{v.label}}</button>
+				</td>
+			</tr>
+			<!-- Fab buttons -->
+			<tr>
+				<th text-left>Buttons: <small>FABs</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-fab [color]="v.value">
+			<mat-icon aria-label="Example icon-button with a plus icon">add</mat-icon>
+		  </button>
+				</td>
+			</tr>
+			<!-- mini Fab buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Mini FABs</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-mini-fab [color]="v.value">
+			<mat-icon aria-label="Example icon-button with a plus icon">add</mat-icon>
+		  </button>
+				</td>
+			</tr>
+			<!-- icon buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Icon</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-icon-button [color]="v.value">
+			<mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+		  </button>
+				</td>
+			</tr>
+			<!-- icon buttons: disabled -->
+			<tr>
+				<th text-left>Buttons: <small>Icon disabled</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-icon-button [color]="v.value" disabled="true">
+			<mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+		  </button>
+				</td>
+			</tr>
+			<!-- checkboxes -->
+			<tr>
+				<th>Checkboxes</th>
+				<td *ngFor="let v of themeValues" text-left>
+					<div class="checkbox-example">
+						<mat-checkbox checked='true' [color]="v.value">{{v.label}}</mat-checkbox>
+						<mat-checkbox [color]="v.value">Two</mat-checkbox>
+						<mat-checkbox [color]="v.value">Three</mat-checkbox>
+					</div>
+				</td>
+			</tr>
+			<!-- chips -->
+			<!-- text chip -->
+			<tr>
+				<th>Chips: <small>text</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-chip-list>
+						<mat-chip [color]="v.value">
+							{{v.label}}
+							<mat-icon matChipRemove>cancel</mat-icon>
+						</mat-chip>
+					</mat-chip-list>
+					<mat-chip-list>
+						<mat-chip [color]="v.value" selected>
+							selected
+							<mat-icon matChipRemove>cancel</mat-icon>
+						</mat-chip>
+					</mat-chip-list>
+				</td>
+			</tr>
+			<!-- avatar chip -->
+			<tr>
+				<th>Chips: <small>avatar</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-chip-list>
+						<mat-chip [color]="v.value">
+							<img src="https://randomuser.me/api/portraits/women/65.jpg" [alt]="v.label" matChipAvatar /> {{v.label}}
+							<mat-icon matChipRemove>cancel</mat-icon>
+						</mat-chip>
+					</mat-chip-list>
+					<mat-chip-list>
+						<mat-chip [color]="v.value" selected>
+							<img src="https://randomuser.me/api/portraits/women/65.jpg" [alt]="v.label" matChipAvatar /> selected
+							<mat-icon matChipRemove>cancel</mat-icon>
+						</mat-chip>
+					</mat-chip-list>
+				</td>
+			</tr>
+			<!-- icon chip -->
+			<tr>
+				<th>Chips: <small>icon</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-chip-list>
+						<mat-chip [color]="v.value">
+							<mat-icon>favorite</mat-icon>
+							{{v.label}}
+							<mat-icon matChipRemove>cancel</mat-icon>
+						</mat-chip>
+					</mat-chip-list>
+					<mat-chip-list>
+						<mat-chip [color]="v.value" selected>
+							<mat-icon>favorite</mat-icon>
+							selected
+							<mat-icon matChipRemove>cancel</mat-icon>
+						</mat-chip>
+					</mat-chip-list>
+				</td>
+			</tr>
+			<!-- date picker -->
+			<tr>
+				<th>Date pickers</th>
+				<td text-left>
+					<mat-form-field>
+						<input matInput [matDatepicker]="picker1" placeholder="Date" [formControl]="date">
+						<mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+						<mat-datepicker #picker1></mat-datepicker>
+					</mat-form-field>
+				</td>
+				<td text-left>
+					<mat-form-field>
+						<input matInput [matDatepicker]="picker2" placeholder="Date" [formControl]="date">
+						<mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+						<mat-datepicker #picker2></mat-datepicker>
+					</mat-form-field>
+				</td>
+				<td text-left>
+					<mat-form-field>
+						<input matInput [matDatepicker]="picker3" placeholder="Date" [formControl]="date">
+						<mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+						<mat-datepicker #picker3></mat-datepicker>
+					</mat-form-field>
+				</td>
+				<td text-left>
+					<mat-form-field>
+						<input matInput [matDatepicker]="picker4" placeholder="Date" [formControl]="date">
+						<mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+						<mat-datepicker #picker4></mat-datepicker>
+					</mat-form-field>
+				</td>
+				<td text-left>
+					<mat-form-field>
+						<input matInput [matDatepicker]="picker5" placeholder="Date" [formControl]="date">
+						<mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+						<mat-datepicker #picker5></mat-datepicker>
+					</mat-form-field>
+				</td>
+			</tr>
+			<tr>
+				<th>Divider</th>
+				<td text-left colspan="5">
+					<mat-list>
+						<mat-list-item>Item 1 w divider below</mat-list-item>
+						<mat-divider></mat-divider>
+						<mat-list-item>Item 2</mat-list-item>
+					</mat-list>
+				</td>
+			</tr>
+			<tr>
+				<th>Lists (items)</th>
+				<td text-left>
+					<mat-list>
+						<h3 mat-subheader>Folders</h3>
+						<mat-list-item *ngFor="let folder of folders">
+							<mat-icon mat-list-icon>folder</mat-icon>
+							<h4 mat-line>Text line one</h4>
+							<p mat-line class="medium-emphasis-text">Text line two</p>
+						</mat-list-item>
+					</mat-list>
+				</td>
+				<td colspan="4">&nbsp;</td>
+			</tr>
+			<!-- icons non-button -->
+			<tr>
+				<th>Icons: <small>active</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-icon [color]="v.value" active-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+				</td>
+			</tr>
+			<tr>
+				<th>Icons: <small>inactive</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-icon [color]="v.value" inactive-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+				</td>
+			</tr>
+			<tr>
+				<th>Icons: <small>disabled</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-icon [color]="v.value" disabled class="disabled-icon" aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+				</td>
+			</tr>
+			<!-- progress bars -->
+			<tr>
+				<th>Progress bars: <small>Determinate</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-progress-bar [color]="v.value" mode="determinate" value="40"></mat-progress-bar>
+				</td>
+			</tr>
+			<tr>
+				<th>Progress bars: <small>Indeterminate</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-progress-bar [color]="v.value" mode="indeterminate" value="40"></mat-progress-bar>
+				</td>
+			</tr>
+			<tr>
+				<th>Progress bars: <small>Buffer</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-progress-bar [color]="v.value" mode="buffer" value="40"></mat-progress-bar>
+				</td>
+			</tr>
+			<tr>
+				<th>Progress bars: <small>Query</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-progress-bar [color]="v.value" mode="query" value="40"></mat-progress-bar>
+				</td>
+			</tr>
+			<!-- progress spinner -->
+			<tr>
+				<th>Progress spinners</th>
+				<td *ngFor="let v of themeValues">
+					<mat-spinner [color]="v.value" [diameter]="32"></mat-spinner>
+				</td>
+			</tr>
+			<!-- radio buttons -->
+			<tr>
+				<th>Radio buttons</th>
+				<td *ngFor="let v of themeValues" text-left>
+					<mat-radio-group class="radio-button-example ">
+						<mat-radio-button [color]="v.value" value="1" checked='true'>{{v.label}}</mat-radio-button>
+						<mat-radio-button [color]="v.value" value="2">Two</mat-radio-button>
+						<mat-radio-button [color]="v.value" value="3">Three</mat-radio-button>
+					</mat-radio-group>
+				</td>
+			</tr>
+			<!-- stepper -->
+			<tr>
+				<th>Steppers</th>
+				<td colspan="5">
+					<app-stepper-example></app-stepper-example>
+				</td>
+			</tr>
+			<!-- switch (slide toggle) -->
+			<tr>
+				<th>Switches (slide toggles)</th>
+				<td *ngFor="let v of themeValues">
+					<mat-slide-toggle checked="true" [color]="v.value">{{v.label}}</mat-slide-toggle>
+				</td>
+			</tr>
+			<!-- slider -->
+			<tr>
+				<th>Sliders</th>
+				<td *ngFor="let v of themeValues">
+					<mat-slider value="10" [color]="v.value"></mat-slider>
+				</td>
+			</tr>
+			<!-- slider: thumb -->
+			<tr>
+				<th>Sliders: <small>thumb label</small></th>
+				<td *ngFor="let v of themeValues">
+					<mat-slider value="10" thumbLabel="true" [color]="v.value"></mat-slider>
+				</td>
+			</tr>
+			<!-- text field (input) -->
+			<tr>
+				<th>Text field (input)</th>
+				<td text-left>
+					<mat-form-field>
+						<input matInput placeholder="Favorite food" value="Pizza">
+					</mat-form-field>
+				</td>
+				<td text-left>
+					<mat-form-field>
+						<input matInput placeholder="Favorite food" value="Pizza">
+					</mat-form-field>
+				</td>
+				<td text-left>
+					<mat-form-field>
+						<input matInput placeholder="Favorite food" value="Pizza">
+					</mat-form-field>
+				</td>
+				<td text-left>
+					<mat-form-field>
+						<input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+						<mat-hint>Assistive text (aka hint)</mat-hint>
+						<mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+							Please enter a valid email address
+						</mat-error>
+						<mat-error *ngIf="emailFormControl.hasError('required')">
+							Email is <strong>required</strong>
+						</mat-error>
+					</mat-form-field>
+				</td>
+			</tr>
+			<!-- text field: prefix -->
+			<tr>
+				<th>Text field: <small>prefix</small></th>
+				<td text-left>
+					<mat-form-field>
+						<span class="medium-emphasis" matPrefix>$ &nbsp;</span>
+						<input type="number" matInput placeholder="Amount" value="37331.69">
+					</mat-form-field>
+				</td>
+			</tr>
+			<!-- text field: trailing icon -->
+			<tr>
+				<th>Text field: <small>trailing icon</small></th>
+				<td text-left>
+					<mat-form-field>
+						<input type="number" matInput placeholder="Percent">
+						<span matSuffix>&nbsp;%</span>
+					</mat-form-field>
+				</td>
+			</tr>
+			<!-- text field: clear button -->
+			<tr>
+				<th>Text field: <small>clear icon button</small></th>
+				<td text-left>
+					<mat-form-field class="example-form-field">
+						<input matInput type="text" placeholder="Clearable input" [(ngModel)]="value">
+						<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+		  <mat-icon>close</mat-icon>
+		  </button>
+					</mat-form-field>
+				</td>
+			</tr>
+			<!-- text field: text area -->
+			<tr>
+				<th>Text area <small>autosize</small></th>
+				<td text-left>
+					<mat-form-field>
+						<mat-label>Autosize textarea</mat-label>
+						<textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+					</mat-form-field>
+				</td>
+			</tr>
+			<!-- text field: text area w/ counter-->
+			<tr>
+				<th>Text area: <small>counter</small></th>
+				<td text-left>
+					<mat-form-field>
+						<textarea matInput matTextareaAutosize="true" #message matAutosizeMinRows="2" matAutosizeMaxRows="5" max-length="500" value=""></textarea>
+						<mat-hint align="start">Don't disclose personal info</mat-hint>
+						<mat-hint align="end">{{message.value.length}} / 500</mat-hint>
+					</mat-form-field>
+				</td>
+			</tr>
+			<!-- toolbar -->
+			<tr>
+				<th>Toolbars</th>
+				<td *ngFor="let v of themeValues">
+					<mat-toolbar [color]="v.value">
+						<mat-toolbar-row>
+							<h1 text-captilize>{{v.label}}</h1>
+							<span class="example-spacer"></span>
+							<button mat-icon-button>
+				<mat-icon aria-label="ellipses icon">more_vertical</mat-icon>
+			  </button>
+						</mat-toolbar-row>
+					</mat-toolbar>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>

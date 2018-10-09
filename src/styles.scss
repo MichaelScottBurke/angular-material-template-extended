@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+@import './styles/palettes';
+@import './styles/theme';
+@import './styles/utilities-style';
+@import './styles/typography';
+@import './styles/global';
+@import './styles/examples';
+
+@include mat-core($custom-typography);

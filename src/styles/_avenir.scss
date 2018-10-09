@@ -1,0 +1,88 @@
+$font-url: "https://github.com/MichaelScottBurke/angular-material-template/blob/master/src/src/fonts/";
+/************** avenir css default font-weight chart *************
+  200    Light or Thin
+  400    Roman, Normal or Regular
+  500    Medium
+  700    Bold Heavy
+  900    Extra Black, Fat, Poster or Ultra Black
+*************/
+
+// LIGHT
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-Light.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+//LIGHT ITALIC
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-LightOblique.otf') format('otf');
+  font-weight: 300;
+  font-style: italic;
+}
+
+//ROMAN (NORMAL)
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-Roman.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//ROMAN ITALIC
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-Oblique.otf') format('otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+//MEDIUM
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-Medium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+//MEDIUM ITALIC
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-MediumOblique.otf') format('otf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+//HEAVY
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-Heavy.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+//HEAVY ITALIC
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-HeavyOblique.otf') format('otf');
+  font-weight: 700;
+  font-style: italic;
+}
+
+//BLACK
+@font-face {
+  font-family: 'Avenir';
+  src: url($font-url+'Avenir-Black.otf') format('otf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+//BLACK ITALIC
+@font-face {
+  font-family: 'Avenir Black Oblique';
+  src: url($font-url+'Avenir-BlackOblique.otf') format('otf');
+  font-weight: 900;
+  font-style: italic;
+}

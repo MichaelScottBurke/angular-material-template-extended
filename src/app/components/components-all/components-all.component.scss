@@ -1,0 +1,104 @@
+//flex layout for examples
+.flex-layout {
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.cell {
+  flex: 1;
+  border: 1px solid rgba(black, .12);
+  padding: 8px;
+  min-width: 145px;
+  //text-align: center;
+}
+
+.cell:first-child {
+  text-align: left;
+}
+
+.cell:not(:last-child) {
+    border-right: none;
+  }
+
+.row:not(:last-child) >.cell {
+  border-bottom: none;
+}
+}
+
+//global button styling
+.mat-raised-button, .mat-button, .mat-tab-label, 
+.mat-stroked-button, .mat-flat-button {
+  text-transform: uppercase;
+}
+
+//checkbox & radio button example
+.checkbox-example, .radio-button-example {
+    mat-checkbox, mat-radio-button {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+//toolbar: spacer
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+//slider: set default width to subtract for padding so fits in small window
+mat-slider {
+    min-width: calc(100% - 16px);
+}
+
+//toolbar width
+mat-toolbar {
+  min-width: 50px;
+}
+
+//color swatch
+[color-swatch] {
+  padding: 4px;
+}
+
+//input width .example-spacer
+mat-form-field.mat-form-field {
+    width: 125px;
+}
+
+//checkbox & radio button example
+.checkbox-example, .radio-button-example {
+    mat-checkbox, mat-radio-button {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+//toolbar: spacer
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+//slider: set default width to subtract for padding so fits in small window
+mat-slider {
+    min-width: calc(100% - 16px);
+}
+
+//toolbar width
+mat-toolbar {
+  min-width: 50px;
+}
+
+
+//input width
+mat-form-field.mat-form-field {
+    width: 125px;
+}
+
+//input width
+mat-form-field.example-full-width {
+    width: 100%;
+}
+
+//for component def expansion panel
+.expansion-panel-content {
+  margin: -16px -24px 0;
+}

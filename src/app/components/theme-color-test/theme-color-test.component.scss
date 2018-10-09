@@ -1,0 +1,33 @@
+//just for color example
+.color-palette-example {
+  .mat-toolbar {
+    height: auto !important;
+    .mat-toolbar-row:not(:first-child) {
+      height: 88px;
+    }
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+//remove border on image in card
+mat-card div,mat-card-lg-image {
+  border: none;
+  border-radius: 2px;
+  width: 200px;
+  }
+
+  .grid-layout {
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  .card-cell {
+    flex: 1;
+    //min-width: 145px;
+    max-width: 400px;
+    margin: 0 24px 24px 0;
+    }
+  }

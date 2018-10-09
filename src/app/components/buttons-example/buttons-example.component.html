@@ -1,0 +1,67 @@
+<table>
+  <!-- buttons -->
+			<!-- text buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Text</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-button [color]="v.value">text</button>
+				</td>
+			</tr>
+			<!-- outlined/stroked buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Outlined (stroked)</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-stroked-button [color]="v.value">outlined</button>
+				</td>
+			</tr>
+      <!-- filled/raised buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Contained</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-raised-button [color]="v.value">contained</button>
+				</td>
+			</tr>
+			<!-- flat buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Flat</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-flat-button [color]="v.value">flat</button>
+				</td>
+			</tr>
+			<!-- Fab buttons -->
+			<tr>
+				<th text-left>Buttons: <small>FABs</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-fab [color]="v.value">
+			<mat-icon aria-label="Example icon-button with a plus icon">add</mat-icon>
+		  </button>
+				</td>
+			</tr>
+			<!-- mini Fab buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Mini FABs</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-mini-fab [color]="v.value">
+			<mat-icon aria-label="Example icon-button with a plus icon">add</mat-icon>
+		  </button>
+				</td>
+			</tr>
+			<!-- icon buttons -->
+			<tr>
+				<th text-left>Buttons: <small>Icon</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-icon-button [color]="v.value">
+			<mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+		  </button>
+				</td>
+			</tr>
+			<!-- icon buttons: disabled -->
+			<tr>
+				<th text-left>Buttons: <small>Icon disabled</small></th>
+				<td *ngFor="let v of themeValues">
+					<button mat-icon-button [color]="v.value" disabled="true">
+			<mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+		  </button>
+				</td>
+			</tr>
+</table>

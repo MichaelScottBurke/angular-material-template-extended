@@ -1,0 +1,97 @@
+/******************* css utilities ****************/
+//as properties rather than classes
+$default-space: 16px;
+
+//text-align
+[text-left], .text-left {text-align: left !important;}
+[text-right], .text-right {text-align: right !important;}
+[text-center], .text-center {text-align: center !important;}
+
+//text wrapping
+[text-wrap], .text-wrap {white-space: normal  !important;}
+[text-nowrap], .text-nowrap {white-space: nowrap !important;}
+
+//text-transform
+[text-uppercase] {text-transform: uppercase !important;}
+[text-lowercase] {text-transform: lowercase !important;}
+[text-captilize], [text-title-case] {text-transform: capitalize !important;}
+[text-sentence-case] {
+    text-transform: lowercase;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+}
+
+//padding
+[no-padding], .no-padding {
+  padding-top: 0 !important; 
+  padding-right: 0 !important; 
+  padding-bottom: 0 !important; 
+  padding-left: 0 !important; 
+};
+
+[padding], .padding {
+  padding: $default-space !important;
+}
+[padding-top], .padding-top {
+  padding-top: $default-space !important;
+}
+[padding-right], .padding-right {
+  padding-top: $default-space !important;
+}
+[padding-bottom], .padding-bottom {
+  padding-top: $default-space !important;
+}
+[padding-left], .padding-left {
+  padding-top: $default-space !important;
+}
+
+[padding-vertical], .padding-vertical {
+  padding-top: $default-space !important;
+  padding-bottom: $default-space !important;
+}
+[padding-horizontal], .padding-horizontal {
+  padding-left: $default-space !important;
+  padding-right: $default-space !important;
+}
+
+//margin
+[no-margin], .no-margin {
+  margin-top: 0 !important; 
+  margin-right: 0 !important; 
+  margin-bottom: 0 !important; 
+  margin-left: 0 !important; 
+};
+
+[margin], .margin {
+  margin: $default-space !important;
+}
+[margin-top], .margin-top {
+  margin-top: $default-space !important;
+}
+[margin-right], .margin-right {
+  margin-top: $default-space !important;
+}
+[margin-bottom], .margin-bottom {
+  margin-top: $default-space !important;
+}
+[margin-left], .margin-left {
+  margin-top: $default-space !important;
+}
+[margin-vertical], .margin-vertical {
+  margin-top: $default-space !important;
+  margin-bottom: $default-space !important;
+}
+[margin-horizontal], .margin-horizontal {
+  margin-left: $default-space !important;
+  margin-right: $default-space !important;
+}
+
+
+//display
+[hide], .hide,  { display: none !important; }
+
+//images
+img[image-fit] {
+  width: 100%;
+}

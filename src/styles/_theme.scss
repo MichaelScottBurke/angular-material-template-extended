@@ -1,0 +1,16 @@
+//default, light theme (custom)
+$primary: mat-palette($custom-teal, 700, 300, 900);
+$secondary: mat-palette($custom-blue, 800, 300, 900); //'accent' in old MD spec
+$brand: mat-palette($custom-green, 500, 300, 900); //additional theme level;
+$error: mat-palette($custom-red, 800, 300, 900); //'warn' in old MD spec
+$surface: mat-palette($custom-gray, 0, 100, 900); //add to match new MD spec
+
+$background: mat-palette($custom-gray, 100); //add to match new MD spec
+$black: black; //can redefine black to match theme
+$white: white;
+
+$custom-theme: mat-light-theme($primary, $secondary, $error);
+@include angular-material-theme($custom-theme);
+
+@import 'theme-utilities';
+@import 'theme-overrides';

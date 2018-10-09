@@ -1,0 +1,16 @@
+<div class="row">
+	<mat-card [ngClass]="[p.name!=='default' ? 'cell' : 'hide']" *ngFor="let p of palettes">
+		<div text-sentence-case text-left [ngClass]="'mat-subtitle-1 '+p.theme+'-text'">{{p.theme}} <br /><small class="medium-emphasis-text mat-caption">{{p.name}} palette</small></div>
+		<div color-swatch *ngFor="let v of p.variants" [ngClass]="[v=='base' || v=='main' ? p.theme : p.theme+'-'+v]">
+			<span>{{v}}</span>
+		</div>
+    <!--div padding text-left [ngClass]="[p.theme!=='background' || p.theme!=='surface' ? '' : 'hide']">
+				<p [ngClass]="p.theme+'-text'" high-emphasis-text text-sentence-case>{{p.theme}} text (high-emphasis only)</p>
+    </div>
+    <div padding [ngClass]="[p.theme!=='background' ? '' : 'hide']">
+				<mat-icon [color]="p.theme" active-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+        <mat-icon [color]="p.theme" inactive-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+        <mat-icon [color]="p.theme" disabled aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+    </div-->
+	</mat-card>
+</div>

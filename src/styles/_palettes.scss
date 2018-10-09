@@ -1,0 +1,128 @@
+$black: black;
+$white: white;
+
+//$custom-palettes: (
+  $custom-teal: (
+      50 : #E1F3F0,
+      100 : #B5E1D8,
+      200 : #86CFBF,
+      300 : #58BBA6, //light
+      400 : #38AC93,
+      500 : #239D82, 
+      600 : #208f75,
+      700 : #1B7F66, //main
+      800 : #156F58,
+      900 : #0D533D, //dark
+      contrast: (   
+          50 : $black,
+          100 : $black,
+          200 : $black,
+          300 : $black,
+          400 : $black,
+          500 : $black,
+          600 : $black,
+          700 : $white,
+          800 : $white,
+          900 : $white
+      )
+  );
+  $custom-blue: (
+      50 : #E3F2FB,
+      100 : #BBDDF5,
+      200 : #92C8EF,
+      300 : #69B3E8, //light  
+      400 : #4CA3E4,
+      500 : #3194E0, 
+      600 : #2A86D3,
+      700 : #1B64AF, 
+      800 : #0F4790, //main
+      900 : #0A2B58, //dark
+      contrast: (
+          50 : $black,
+          100 : $black,
+          200 : $black,
+          300 : $black,
+          400 : $black,
+          500 : $black,
+          600 : $black,
+          700 : $white,
+          800 : $white,
+          900 : $white
+      )
+  );
+  $custom-green: (
+      50 : #EEF8E8,
+      100 : #D6EDC6,
+      200 : #BAE1A1,
+      300 : #9ED47B, //light
+      400 : #88CB5E,
+      500 : #73C241, 
+      600 : #64B239, 
+      700 : #509E2F, //main
+      800 : #3C8A26,
+      900 : #0F6813, //dark
+      contrast: (
+          50 : $black,
+          100 : $black,
+          200 : $black,
+          300 : $black,
+          400 : $black,
+          500 : $black,
+          600 : $black,
+          700 : $black,
+          800 : $black,
+          900 : $white
+      )
+  );
+  $custom-red: (
+      50 : #FFEAED,
+      100 : #FFCAD0,
+      200 : #F69595,
+      300 : #ED6B6C,
+      400 : #F84446,
+      500 : #FD2D27,
+      600 : #EE1E28,
+      700 : #DC0C22, //base
+      800 : #CF001A,
+      900 : #C1000A,
+      contrast: (
+          50 : $black,
+          100 : $black,
+          200 : $black,
+          300 : $black,
+          400 : $black,
+          500 : $white,
+          600 : $white,
+          700 : $white,
+          800 : $white,
+          900 : $white
+      )
+  );
+
+  $custom-gray: (
+      0:  #FFFFFF, //base
+      50 : #FBFAF8, //light
+      100 : #F5F4F2, //background
+      200 : #EDECEA,
+      300 : #DFDEDC,
+      400 : #BBBBB9,
+      500 : #9C9B99, 
+      600 : #737271,
+      700 : #5F5F5D, 
+      800 : #41403E,
+      900 : #201F1E,
+      contrast: (
+          0: $black,
+          50 : $black,
+          100 : $black,
+          200 : $black,
+          300 : $black,
+          400 : $black,
+          500 : $black,
+          600 : $white,
+          700 : $white,
+          800 : $white,
+          900 : $white
+      )
+  );
+//)

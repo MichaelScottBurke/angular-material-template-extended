@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+
+//custom typography: note update Material spec categories on right
+//letter-spacing is not applied; do we need it???
+$custom-typography: mat-typography-config( 
+    $font-family:   'Avenir, Open Sans, Roboto, Helvetica Neue, sans-serif',
+    $display-4:     mat-typography-level(9.6rem, 11.2rem, 200), //$headline-1
+    $display-3:     mat-typography-level(6.0rem, 7.1rem, 200), //$headline-2
+    $display-2:     mat-typography-level(4.80rem, 5.7rem, 500), //$headline-3
+    $display-1:     mat-typography-level(3.40rem, 4.00rem, 500), //$headline-4
+    $headline:      mat-typography-level(2.40rem, 2.80rem, 500), //$headline-5
+    $title:         mat-typography-level(2.00rem, 2.40rem, 600), //$headline-6
+    $subheading-2:  mat-typography-level(1.60rem, 2.40rem, 500), //$subtitle-1
+    $subheading-1:  mat-typography-level(1.50rem, 2.40rem, 600), //$subtitle-2
+    $body-2:        mat-typography-level(1.60rem, 2.80rem, 500), //$body-1 in new spec
+    $body-1:        mat-typography-level(1.40rem, 2.00rem, 500), //$body-2 in new spec
+    $button:        mat-typography-level(1.40rem, 1.60rem, 600), 
+    $caption:       mat-typography-level(1.20rem, 1.60rem, 500),
+    // Line-height must be unit-less fraction of the font-size.
+    $input:         mat-typography-level(1.60rem, 1.125, 500)
+);
+
+ //this adds the "overline" type category not yet supported in Angular Material
+$custom-typography-add: mat-typography-config(
+  $font-family:   'Avenir, Open Sans, Roboto, Helvetica Neue, sans-serif',
+  $caption:       mat-typography-level(1rem, 1.4rem, 600) //$overline
+);
+
+@import 'typography-utilities';
